@@ -2,10 +2,10 @@
 using namespace std;
 
 string determineColor(const string& s) {
-    int col = s[0] - 'a' + 1;
-    int row = s[1] - '0';
+    int x = s[0] - 'a' + 1;
+    int y = s[1] - '0';
 
-    if ((col + row) % 2 == 0)
+    if ((x + y) % 2 == 0)
         return "Black";
     else
         return "White";
@@ -14,6 +14,8 @@ string determineColor(const string& s) {
 int main() {
     string s;
     cin >> s;
-    cout << determineColor(s) << endl;
+
+    cout << determineColor(s);
+
     return 0;
 }
